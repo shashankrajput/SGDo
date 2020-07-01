@@ -10,7 +10,7 @@ def parallelOptimization_K(K):
   n = 500
   print(K)
   eta = stepFactor * np.log(n*K) / (n*K)
-  e1 = 0; e2 = 0; e3 = 0; e4 = 0; e5 = 0; e6 = 0; e7 = 0; e8 = 0; e9 = 0
+  e3 = 0;
   for rep in range(reps):
     e3 += randomReshuffleNonLipHess(eta, n, K)
 
