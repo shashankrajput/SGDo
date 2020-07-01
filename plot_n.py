@@ -8,7 +8,7 @@ matplotlib.rcParams['axes.prop_cycle'] = matplotlib.cycler(color=['#377eb8', '#f
 matplotlib.rc('lines', linewidth=3)
 
 # experiment4
-f = open('plotdata/experiment4_parallel_copy', 'r') # Replace with desired input file name
+f = open('plotdata/experiment_n_parallel_4.0', 'r') # Replace with desired input file name
 output = f.read()
 output = output.split("\n")
 x_list = output[0].split(",")
