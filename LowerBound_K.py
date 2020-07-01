@@ -40,5 +40,5 @@ pool = multiprocessing.Pool(16)
 K_range = range(K_beg,K_end)
 results = pool.map(parallelOptimization_K, K_range)
 
-f = open('plotdata/experiment3_parallel_'+str(sF), 'w') # Replace with desired output file name
+f = open('plotdata/experiment_K_parallel_'+str(sF), 'w') # Replace with desired output file name
 f.write(",".join([str(K) for K in K_range]) + "\n" + "\n".join([",".join([str(r) for r in res]) for res in results]))
