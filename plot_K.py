@@ -12,7 +12,7 @@ matplotlib.rcParams['axes.prop_cycle'] = matplotlib.cycler(color=['#377eb8',  '#
 matplotlib.rc('lines', linewidth=3)
 
 # experiment3
-f = open('plotdata/lower bound/experiment3_parallel_1_by_n', 'r')
+f = open('plotdata/lower bound/experiment3_parallel_1_by_n', 'r') # Replace with desired input file name
 output = f.read()
 output = output.split("\n")
 x_list = output[0].split(",")
