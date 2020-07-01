@@ -32,13 +32,13 @@ def randomReshuffleNonLipHess(eta, n, K):
 
 
 reps = 1000
-it_beg=30
-it_end=200
+K_beg=30
+K_end=200
 x_list=[]
 l1=[];l2=[];l3=[]
 pool = multiprocessing.Pool(16)
-iter_range = range(it_beg,it_end)
-results = pool.map(parallelOptimization_K, iter_range)
+K_range = range(K_beg,K_end)
+results = pool.map(parallelOptimization_K, K_range)
 
 f = open('plotdata/experiment3_parallel_'+str(sF), 'w') # Replace with desired output file name
 f.write(",".join([str(iter) for iter in iter_range]) + "\n" + "\n".join([",".join([str(r) for r in res]) for res in results]))
