@@ -5,7 +5,7 @@ import multiprocessing
 G = 1.0
 sF=4.0
 
-def paralleOptimization_n(n):
+def parallelOptimization_n(n):
   print(n)
   stepFactor=sF
   K=500
@@ -37,6 +37,6 @@ n_end=200
 x_list=[]
 n_range = range(n_beg,n_end,2)
 pool = multiprocessing.Pool(16)
-results = pool.map(paralleOptimization_n, n_range)
+results = pool.map(parallelOptimization_n, n_range)
 f = open('plotdata/experiment4_parallel_'+str(sF), 'w') # Replace with desired output file name
 f.write(",".join([str(n) for n in n_range]) + "\n" + "\n".join([",".join([str(r) for r in res]) for res in results]))
